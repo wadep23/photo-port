@@ -14,7 +14,7 @@ function App() {
     { name: 'food', description: 'Delicious delicacies' },
     { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },    
   ])
-
+  
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   return (
@@ -24,7 +24,7 @@ function App() {
     setCurrentCategory={ setCurrentCategory }
     currentCategory={ currentCategory } />
   <main>
-    <Gallery />
+    <Gallery currentCategory={currentCategory} />
     <About />
   </main>
 </div>

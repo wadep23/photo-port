@@ -17,9 +17,13 @@ describe('contact form renders', () => {
         expect(asFragment()).toMatchSnapshot();
     })
 
-    // it('matches "Contact Me" on h1 tag', () => {
-    //     const wrapper = mount(<h1 data-testid='Contact Me' />);
-
-    //     expect(data-testid.value)
-    // })
+    it('renders', () => {
+        const { getByTestId } = render(<Contact />)
+        expect(getByTestId('h1tag')).toHaveTextContent('Contact me')
+      })
+       
+      it('renders', () => {
+        const { getByTestId } = render(<Contact />)
+        expect(getByTestId('button')).toHaveTextContent('Submit')
+      })
 })

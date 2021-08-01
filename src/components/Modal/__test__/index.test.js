@@ -17,7 +17,10 @@ const currentPhoto = {
       })
 
       it('matches snapshot DOM node structure', () => {
-        const { asFragment } = render(<Modal />);
+        const { asFragment } = render(<Modal
+          onClose={mockToggleModal}
+          currentPhoto={currentPhoto}
+        />);
         
         expect(asFragment()).toMatchSnapshot();
     })
